@@ -1,18 +1,20 @@
 server:
-  port: 9090
-  address: 127.0.0.1
+  port: 9090 #服务器端口
+  address: 127.0.0.1 #服务器ip
   tomcat:
-    uri-encoding: UTF-8
+    uri-encoding: UTF-8 #tomcat编码
+  servlet:
+    context-path: /blackwater_novel #上下文路径,父路径
 #数据源
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url:
-    username:
-    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver #jdbc驱动
+    url: #连接串
+    username: #数据库用户名
+    password: #数据库密码
 mybatis:
-  mapper-locations: classpath:mapper/*Mapper.xml
-  type-aliases-package:
+  mapper-locations: classpath:mapper/*Mapper.xml #MyBatis 扫描路径
+  type-aliases-package:  #MyBatis 扫描实体路径
 #showSql
 logging:
   level:

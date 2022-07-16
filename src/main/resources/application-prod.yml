@@ -1,0 +1,21 @@
+server:
+  port: 9090
+  address: 127.0.0.1
+  tomcat:
+    uri-encoding: UTF-8
+#数据源
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url:
+    username:
+    password:
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package:
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper : debug

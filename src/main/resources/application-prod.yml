@@ -12,9 +12,22 @@ spring:
     url: #连接串
     username: #数据库用户名
     password: #数据库密码
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
 mybatis:
-  mapper-locations: classpath:mapper/*Mapper.xml #MyBatis 扫描路径
-  type-aliases-package:  #MyBatis 扫描实体路径
+  #classpath在MAVEN中指向的是resources路径
+  mapper-locations: classpath*:com/blackwater/novel/**/xml/*Mapper.xml #MyBatis 扫描路径
+#  type-aliases-package: com.blackwater.novel #MyBatis 扫描实体路径
 #showSql
 logging:
   level:

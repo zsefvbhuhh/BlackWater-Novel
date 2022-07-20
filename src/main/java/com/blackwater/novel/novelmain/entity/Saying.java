@@ -1,6 +1,9 @@
 package com.blackwater.novel.novelmain.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
 /**
@@ -10,6 +13,8 @@ import java.io.Serializable;
  * @date : 2022-07-18 14:30
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Saying implements Serializable {
     /**
      *

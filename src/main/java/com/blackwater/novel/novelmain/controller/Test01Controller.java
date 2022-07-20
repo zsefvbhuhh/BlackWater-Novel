@@ -1,5 +1,6 @@
 package com.blackwater.novel.novelmain.controller;
 
+import com.blackwater.novel.novelmain.entity.Saying;
 import com.blackwater.novel.novelmain.mapper.Test01Mapper;
 import com.blackwater.novel.novelmain.service.SayService;
 import lombok.extern.slf4j.Slf4j;
@@ -42,5 +43,12 @@ public class Test01Controller {
     @RequestMapping("hello02")
     public String getTest03(){
         return test01Mapper.getTestString();
+    }
+
+
+    @ResponseBody
+    @RequestMapping("hello03")
+    public List<Saying> getSayingList(){
+        return sayService.getSayingList();
     }
 }

@@ -9,7 +9,7 @@
 
 
     <select id="getTest01StringByAuthor" resultType="java.lang.String">
-        select * from saying where author = #{author} limit 1
+        select body from saying where author = #{author} limit 1
     </select>
 
 

@@ -31,6 +31,4 @@ mybatis:
 #showSql
 logging:
   level:
-    com:
-      example:
-        mapper : debug
+    com.blackwater.novel : debug

@@ -37,4 +37,8 @@ public class SayService{
     public List<Saying> getSayingList(){
         return mapper.selectList(null);
     }
+
+    public List<Saying> getSayingListByAuthor(String author){
+        return mapper.getSayingListByAuthor(author);
+    }
 }

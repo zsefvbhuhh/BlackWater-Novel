@@ -24,10 +24,16 @@ spring:
     testOnBorrow: false
     testOnReturn: false
     poolPreparedStatements: true
-mybatis:
-  #classpath在MAVEN中指向的是resources路径
-  mapper-locations: classpath*:com/blackwater/novel/**/xml/*Mapper.xml #MyBatis 扫描路径
+#mybatis:
+#  classpath在MAVEN中指向的是resources路径
+#  mapper-locations: classpath*:com/blackwater/novel/**/xml/*Mapper.xml #MyBatis 扫描路径
 #  type-aliases-package: com.blackwater.novel #MyBatis 扫描实体路径
+
+# 由于加了MybatisPlus 所以用这个
+mybatis-plus:
+  # xml扫描路径
+  mapper-locations: classpath*:com/blackwater/novel/**/xml/*Mapper.xml
+
 #showSql
 logging:
   level:

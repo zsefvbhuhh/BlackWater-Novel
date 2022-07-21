@@ -25,7 +25,7 @@ public class Test01Controller {
     private SayService sayService;
 
     @Autowired
-    Test01Mapper test01Mapper;
+    private Test01Mapper test01Mapper;
 
     @RequestMapping("hello01")
     @ResponseBody
@@ -45,10 +45,21 @@ public class Test01Controller {
         return test01Mapper.getTestString();
     }
 
+    @RequestMapping("hello05")
+    @ResponseBody
+    public String hello05(){
+        return "Hi,MyBro2";
+    }
 
     @ResponseBody
     @RequestMapping("hello03")
     public List<Saying> getSayingList(){
         return sayService.getSayingList();
+    }
+
+    @ResponseBody
+    @RequestMapping("hello06")
+    public List<Saying> getSayingListByAuthor(@RequestParam("author") String author){
+        return sayService.getSayingListByAuthor(author);
     }
 }

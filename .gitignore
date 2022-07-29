@@ -12,3 +12,4 @@ mvnw.cmd
 HELP.md
 mvnw
 /src/main/resources/application-dev.yml
+/.vscode/
